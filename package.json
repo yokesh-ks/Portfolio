@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
@@ -24,7 +25,8 @@
   },
   "devDependencies": {
     "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4"
+    "eslint-config-next": "12.1.4",
+    "prettier": "^2.7.1"
   },
   "config": {
     "commitizen": {
