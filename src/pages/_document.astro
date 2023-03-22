@@ -1,0 +1,28 @@
+---
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import { ServerStyleSheet } from "styled-components";
+---
+
+<:>
+  <_: const sheet = new ServerStyleSheet(); />
+  <_: const originalRenderPage = ctx.renderPage; />
+  <_: let initialProps; />
+
+  <_: try { />
+    <_: ctx.renderPage = () => originalRenderPage({ enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />), }); />
+    <_: initialProps = await Document.getInitialProps(ctx); />
+    <_: } finally { sheet.seal(); } />
+
+  <Html lang="en-GB">
+    <Head>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+      <style>{sheet.getStyleElement()}</style>
+      {initialProps?.head}
+    </Head>
+    <body>
+      <Main />
+      <NextScript />
+    </body>
+  </Html>
+</:>
+
