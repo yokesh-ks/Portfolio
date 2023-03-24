@@ -1,8 +1,3 @@
 My Portfolio Website
 
-[Live Site](https://yokesh-portfolio.vercel.app/)
-
-Stacks Used:
-* Next.js
-* Chakra UI
-* Framer Motion
+[Live Site](https://yokesh-ks.vercel.app/)
