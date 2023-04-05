@@ -1,9 +1,18 @@
 ---
-import "../styles/globals.css";
+import "../../styles/globals.css";
 import Main from "../components/layout/main.astro";
+
+import { Montserrat } from 'next/font/google'
+
+const montserrat = Inter({
+  subsets: ['latin'],
+  variable: '--font-mont',
+})
 ---
 
 <Main>
-  <Component {...pageProps} key={router.route}/>
+  <main class={`${montserrat.variable} font-sans bg-dark`}>
+    <Component {...pageProps} key={router.route}/>
+  </main>
 </Main>
 
