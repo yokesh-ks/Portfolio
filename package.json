@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "start": "astro start",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "commit": "git-cz",
     "prettier": "prettier --write ."
   },
   "dependencies": {
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
-    "astro": "^2.1.4",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "framer-motion": "^6",
@@ -25,8 +25,7 @@
   "devDependencies": {
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
-    "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.8.0"
+    "prettier": "^2.7.1"
   },
   "config": {
     "commitizen": {
