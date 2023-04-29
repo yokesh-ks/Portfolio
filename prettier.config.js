@@ -1,4 +1,4 @@
-const options = {
+export const options = {
   arrowParens: "avoid",
   singleQuotes: true,
   bracketSpacing: true,
@@ -7,5 +7,3 @@ const options = {
   tabWidth: 2,
   trailingComma: "none",
 };
-
-export default options;

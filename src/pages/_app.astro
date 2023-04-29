@@ -1,9 +1,18 @@
 ---
 import "../styles/globals.css";
+import { useRouter } from 'next/router'
+
 import Main from "../components/layout/main.astro";
+
+const {Component, pageProps} = Astro.props
+
+const router = useRouter()
+
 ---
 
-<Main>
-  <Component {...pageProps} key={router.route}/>
-</Main>
+<>
 
+<Main />
+  <!-- <GlobalStyle /> -->
+  <Component {...pageProps} key={router.route}/>
+</>
