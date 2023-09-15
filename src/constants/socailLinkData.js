@@ -7,8 +7,4 @@ export const SocialLinkData = [
         name: 'Linkedin',
         link: 'https://www.linkedin.com/in/yokesh-ks/'
     },
-    {
-        name: 'Github',
-        link: ''
-    },
 ]
