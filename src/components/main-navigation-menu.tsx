@@ -6,8 +6,8 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { Badge } from "@/components/ui/badge";
+} from "@camped-ui/navigation-menu";
+import { Badge } from "@camped-ui/badge";
 import { navMenuConfig } from "@/config/nav-menu";
 import type { MenuItem } from "@/types";
 

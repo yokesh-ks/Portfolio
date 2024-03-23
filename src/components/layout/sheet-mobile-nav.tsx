@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@camped-ui/button";
+import { ScrollArea } from "@camped-ui/scroll-area";
+import { Sheet, SheetContent, SheetTrigger } from "@camped-ui/sheet";
 import { siteConfig } from "@/config/site";
 import { Icons } from "@/icons";
 import type { MainNavItem, SidebarNavItem } from "@/types";
