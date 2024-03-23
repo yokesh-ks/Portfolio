@@ -1,16 +1,26 @@
 ---
-// import Main from "../components/layout/main.astro"
-import NavBar from '../components/navbar.astro'
-import Hero from '../components/hero.astro'
-import Footer from '../components/footer.astro'
-import HireMe from '../components/hireme.astro'
+import MainLayout from "@/layouts/main-layout.astro";
 ---
 
+<MainLayout title="Yokesh">
+  <section class="space-y-6 pb-12 pt-16 lg:py-28">
+    <div
+      class="container flex max-w-[64rem] flex-col items-center gap-5 text-center"
+    >
+      <h1
+        class="font-heading text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl !leading-[1.1] text-balance"
+      >
+        Revolutionizing Digital With
+        <span class="text-gradient_indigo-purple"> Responsive Design.</span>
+      </h1>
 
-<main class="text-dark w-full min-h-screen bg-light">
-        <NavBar />
-        <Hero />
-        <Footer />
-        <HireMe />
-</main>
-
+      <p
+        class="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 text-balance"
+      >
+        As a passionate Full Stack Web Developer, I strive to transform ideas
+        into innovative web applications using responsive website design.
+        Explore my latest projects and article
+      </p>
+    </div>
+  </section>
+</MainLayout>
