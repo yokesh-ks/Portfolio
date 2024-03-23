@@ -1,5 +1,4 @@
 ---
-import { Badge } from "@camped-ui/badge";
 import { buttonVariants } from "@camped-ui/button";
 import { cn, formatDate } from "@/lib/utils";
 import { Icon } from "astro-icon/components";
@@ -29,15 +28,6 @@ const { title, description, pubDate, updatedDate, coverImage, category } =
     </a>
 
     <article class="prose dark:prose-invert max-w-none">
-      <a href={`/blog/category/${category}`}>
-        <Badge
-          radius="md"
-          className="capitalize"
-          transition:name={"category-" + slug}
-        >
-          {category}
-        </Badge>
-      </a>
       <Image
         class="rounded-xl overflow-hidden my-6"
         width={1020}

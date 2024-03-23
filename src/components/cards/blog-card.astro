@@ -1,5 +1,4 @@
 ---
-import { Badge } from "@camped-ui/badge";
 import { formatDate } from "@/lib/utils";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
@@ -25,15 +24,6 @@ const post = Astro.props;
   </a>
 
   <div class="flex items-center justify-between">
-    <a href={`/blog/category/${post.data.category}`}>
-      <Badge
-        radius="md"
-        className="capitalize"
-        transition:name={"category-" + post.slug}
-      >
-        {post.data.category}
-      </Badge>
-    </a>
     <span
       class="font-medium text-muted-foreground"
       transition:name={"date-" + post.slug}

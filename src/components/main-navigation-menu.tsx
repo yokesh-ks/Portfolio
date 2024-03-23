@@ -7,7 +7,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@camped-ui/navigation-menu";
-import { Badge } from "@camped-ui/badge";
 import { navMenuConfig } from "@/config/nav-menu";
 import type { MenuItem } from "@/types";
 
@@ -55,20 +54,6 @@ const ListItem: React.FC<MenuItem> = ({
       >
         <div className="text-sm font-medium leading-none">
           <span className="mr-2">{title}</span>
-          {disabled ? (
-            <Badge
-              variant="secondary"
-              radius="sm"
-              className="h-5 px-1.5 text-xs font-medium"
-            >
-              SOON
-            </Badge>
-          ) : null}
-          {launched ? (
-            <Badge radius="sm" className="h-5 px-1.5 text-xs font-medium">
-              NEW
-            </Badge>
-          ) : null}
         </div>
         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
           {description}
