@@ -7,6 +7,7 @@ import { SheetMobileNav } from "@/components/layout/sheet-mobile-nav";
 import { navMenuConfig } from "@/config/nav-menu";
 import { siteConfig } from "@/config/site";
 import { Icon } from "astro-icon/components";
+import { Logo } from "../components/atoms/logo";
 
 type Props = {
   title: string;
@@ -27,6 +28,9 @@ const { title, description, mainClass } = Astro.props;
     />
 
     <nav slot="right-header" class="flex gap-4">
+      <div class="absolute left-[50%] top-2 translate-x-[-50%]">
+        <Logo client:load />
+      </div>
       <a
         href={siteConfig.links.github}
         target="_blank"

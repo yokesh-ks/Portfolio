@@ -3,7 +3,10 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "node_modules/@camped-ui/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -18,10 +21,10 @@ module.exports = {
         heading: ["CalSans Semibold", ...fontFamily.sans],
       },
       height: {
-        "18": "4.5rem",
+        18: "4.5rem",
       },
       spacing: {
-        "18": "4.5rem",
+        18: "4.5rem",
       },
       colors: {
         border: "hsl(var(--border))",
