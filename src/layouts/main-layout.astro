@@ -13,12 +13,13 @@ type Props = {
   title: string;
   description?: string;
   mainClass?: string;
+  image?: string;
 };
 
-const { title, description, mainClass } = Astro.props;
+const { title, description, mainClass, image } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={image}>
   <Header>
     <MainNavigationMenu slot="left-header" client:load />
     <SheetMobileNav

@@ -9,11 +9,18 @@ import MainLayout from "./main-layout.astro";
 type Props = CollectionEntry<"blog">;
 
 const slug = Astro.props.slug;
-const { title, description, pubDate, updatedDate, coverImage, category } =
-  Astro.props.data;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  coverImage,
+  category,
+  ogImage,
+} = Astro.props.data;
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title} description={description} image={ogImage}>
   <div class="relative container max-w-screen-md py-10">
     <a
       href="/blog"

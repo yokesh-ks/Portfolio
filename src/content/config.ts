@@ -6,6 +6,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     coverImage: z.string(),
+    ogImage: z.string(),
     category: z.string(),
     // Transform string to Date object
     pubDate: z
@@ -39,5 +40,4 @@ const guides = defineCollection({
   }),
 });
 
-
-export const collections = { blog , docs, guides };
+export const collections = { blog, docs, guides };
