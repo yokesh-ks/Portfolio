@@ -24,3 +24,9 @@ export async function getPostsByCategory(category: string) {
 
   return posts;
 }
+
+export async function getGuides() {
+  const guides = (await getCollection("guides"))
+  return guides;
+}
+

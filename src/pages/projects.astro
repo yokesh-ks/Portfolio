@@ -1,25 +1,29 @@
 ---
 import MainLayout from "@/layouts/main-layout.astro";
-import { resources } from "@/constants/resources";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { projects } from "@/constants/projects";
+import DocsPageHeader from "@/components/page-header.astro";
 ---
 
 <MainLayout
   title="Resources"
   description="Top Development Resources"
-  mainClass="container py-10"
+  mainClass="container max-w-6xl py-10"
 >
-  <section class="space-y-5">
-    <h1 class="font-heading text-4xl">🚀 Projects</h1>
-  </section>
-  <section class="mt-8">
-    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <DocsPageHeader
+      heading="🚀 Projects"
+      text=""
+    />
+    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {
         projects?.map((i) => (
           <a href={`${i?.link}?ref=yokesh.in`} target="_blank">
             <Card className="p-4 relative">
-              <img src={i?.logo} class="w-11 h-11 object-cover" alt={i?.title} />
+              <img
+                src={i?.logo}
+                class="w-11 h-11 object-cover"
+                alt={i?.title}
+              />
               <CardTitle className="mt-2 text-lg">{i?.title}</CardTitle>
               <CardDescription className="mt-2">
                 {i?.description}
@@ -29,5 +33,4 @@ import { projects } from "@/constants/projects";
         ))
       }
     </div>
-  </section>
 </MainLayout>

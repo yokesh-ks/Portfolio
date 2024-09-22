@@ -15,6 +15,10 @@ export const navMenuConfig: NavMenuConfig = {
       href: "/blog",
     },
     {
+      title: "Snippets",
+      href: "/snippets",
+    },
+    {
       title: "Resources",
       href: "/resources",
     },

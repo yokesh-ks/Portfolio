@@ -26,7 +26,6 @@ export function SheetMobileNav({
 
   // [
   //     ...marketingConfig.mainNav,
-  //     ...docsConfig.mainNav,
   //   ]
 
   return (

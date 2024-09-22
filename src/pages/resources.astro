@@ -2,28 +2,23 @@
 import MainLayout from "@/layouts/main-layout.astro";
 import { resources } from "@/constants/resources";
 import {Card, CardTitle, CardDescription} from "@/components/ui/card"
+import DocsPageHeader from "@/components/page-header.astro";
 ---
 
 <MainLayout
   title="Resources"
   description="Top Development Resources"
-  mainClass="container py-10"
+  mainClass="container max-w-6xl py-10"
 >
-  <section class="space-y-5">
-    <h1 class="font-heading text-4xl">🚀 Top Development Resources</h1>
-    <p>Unveiling the Hidden Gems That Have Shaped My Journey! 🌟</p>
-
-    <p>
-      For years, these websites have been my go-to for mastering app development
-      and solving tough challenges. Whether you're debugging or brainstorming,
-      these resources offer the tools and insights you need to succeed! 💻🔥
-    </p>
-  </section>
-  <section class="mt-8">
+  <DocsPageHeader
+    heading="🚀 Top Development Resources"
+    text="For years, these websites have been my go-to for mastering app development and solving tough challenges. Whether you're debugging or brainstorming, these resources offer the tools and insights you need to succeed! 💻🔥"
+  />
+  <div class="mt-8">
     {
       resources?.map((item) => (
         <h1 class="font-bold text-xl mt-8">{item?.label}</h1>
-        <div class="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4">
+        <div class="grid md:grid-cols-3 grid-cols-1 mt-4 gap-4">
         {item?.items?.map((i) => (
             <a href={`https://${i?.link}`} target="_blank">
 <Card className="p-4 relative">
@@ -39,5 +34,5 @@ import {Card, CardTitle, CardDescription} from "@/components/ui/card"
         </div>
       ))
     }
-  </section>
+  </div>
 </MainLayout>

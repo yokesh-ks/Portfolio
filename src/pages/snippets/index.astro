@@ -1,0 +1,26 @@
+---
+import GuideCard from "@/components/cards/guide-card.astro";
+import DocsPageHeader from "@/components/page-header.astro";
+import MainLayout from "@/layouts/main-layout.astro";
+import { getGuides } from "@/lib/fetchers";
+
+const guides = await getGuides();
+---
+
+<MainLayout title="Snippets" mainClass="container max-w-6xl py-10">
+  <DocsPageHeader
+    heading="Snippets"
+    text="Code snippets that can be easily integrated in your application."
+  />
+  {
+    guides?.length ? (
+      <div class="grid gap-4 md:grid-cols-2 md:gap-6">
+        {guides.map((guide) => (
+          <GuideCard {...guide} />
+        ))}
+      </div>
+    ) : (
+      <p>No guides published.</p>
+    )
+  }
+</MainLayout>
