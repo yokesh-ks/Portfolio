@@ -14,5 +14,9 @@ export const navMenuConfig: NavMenuConfig = {
       title: "Blog",
       href: "/blog",
     },
+    {
+      title: "Resources",
+      href: "/resources",
+    },
   ],
 };

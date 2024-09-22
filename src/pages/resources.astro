@@ -1,0 +1,45 @@
+---
+import MainLayout from "@/layouts/main-layout.astro";
+import { resources } from "@/constants/resources";
+import {Card, CardTitle, CardDescription} from "@/components/ui/card"
+---
+
+<MainLayout
+  title="Resources"
+  description="Top Development Resources"
+  mainClass="container py-10"
+>
+  <section class="space-y-5">
+    <h1 class="font-heading text-4xl">🚀 Top Development Resources</h1>
+    <p>Unveiling the Hidden Gems That Have Shaped My Journey! 🌟</p>
+
+    <p>
+      For years, these websites have been my go-to for mastering app development
+      and solving tough challenges. Whether you're debugging or brainstorming,
+      these resources offer the tools and insights you need to succeed! 💻🔥
+    </p>
+  </section>
+  <section class="mt-8">
+    {
+      resources?.map((item) => (
+        <h1 class="font-bold text-xl mt-8">{item?.label}</h1>
+        <div class="grid grid-cols-4 mt-4 gap-4">
+        {item?.items?.map((i) => (
+            <a href={`https://${i?.link}`} target="_blank">
+
+<Card className="p-4 relative">
+                <p  class="text-[#2463eb]">{i?.link}</p>
+                 <CardTitle className="mt-2">
+                {i?.label}
+                </CardTitle>
+                <CardDescription className="mt-2">{i?.description}</CardDescription>
+                {i?.imageUrl && <img src={i?.imageUrl} class="absolute top-4 right-4 w-6 h-6 object-contain" />}
+                </Card>
+            </a>
+
+        ))}
+        </div>
+      ))
+    }
+  </section>
+</MainLayout>
