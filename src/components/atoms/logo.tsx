@@ -1,11 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 export const Logo = () => {
   return (
     <div className="flex items-center justify-center">
       <motion.a
-        href=""
+        href="/"
         className="w-16 h-16 bg-primary text-primary-foreground flex items-center justify-center rounded-full text-2xl font-bold"
         whileHover={{
           backgroundColor: [

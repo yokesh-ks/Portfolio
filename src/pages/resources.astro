@@ -26,7 +26,6 @@ import {Card, CardTitle, CardDescription} from "@/components/ui/card"
         <div class="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4">
         {item?.items?.map((i) => (
             <a href={`https://${i?.link}`} target="_blank">
-
 <Card className="p-4 relative">
                 <p  class="text-[#2463eb]">{i?.link}</p>
                  <CardTitle className="mt-2">
@@ -36,7 +35,6 @@ import {Card, CardTitle, CardDescription} from "@/components/ui/card"
                 {i?.imageUrl && <img src={i?.imageUrl} class="absolute top-4 right-4 w-6 h-6 object-contain" />}
                 </Card>
             </a>
-
         ))}
         </div>
       ))
