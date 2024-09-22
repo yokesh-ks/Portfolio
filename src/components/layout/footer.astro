@@ -1,0 +1,120 @@
+---
+import { ThemeToggle } from "@/components/theme-toggle";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { Icon } from "astro-icon/components";
+
+type Props = {
+  className?: string;
+};
+
+const { className } = Astro.props;
+
+export const footerLinks = [
+  {
+    items: [
+      { title: "About", href: "/about" },
+      { title: "Contact", href: "/about" },
+    ],
+  },
+  {
+    title: "Projects",
+    items: [
+      {
+        title: "NpmStats",
+        href: "https://npmstats.ingeniousclan.com/?ref=yokesh.in",
+      },
+      {
+        title: "Domain Explorer",
+        href: "https://domain-explorer.ingeniousclan.com/?ref=yokesh.in",
+      },
+    ],
+  },
+  {
+    items: [
+      { title: "Blog", href: "/blog" },
+      { title: "Snippets", href: "/snippets" },
+      { title: "Resouces", href: "/resources" },
+    ],
+  },
+  {
+    title: "Follow Me",
+    items: [
+      {
+        title: "Github",
+        href: siteConfig?.links.github,
+      },
+      {
+        title: "Linkedin",
+        href: siteConfig?.links.linkedin,
+      },
+      {
+        title: "Medium",
+        href: siteConfig?.links.medium,
+      },
+      {
+        title: "Twitter",
+        href: siteConfig?.links.twitter,
+      },
+    ],
+  },
+];
+---
+
+<footer class={cn("border-t", className)}>
+  <div
+    class="container grid grid-cols-1 gap-6 py-14 sm:grid-cols-2 md:grid-cols-5"
+  >
+    <div>
+      <span class="text-sm font-medium text-foreground"> YOKESH KS </span>
+      <p class="mt-4 text-sm text-muted-foreground">
+        Enthusiastic Lead Web Developer at Incresco, passionate about building
+        responsive websites and driving digital transformation.
+      </p>
+    </div>
+    {
+      footerLinks.map((section) => (
+        <div>
+          {section.title && (
+            <h3 class="text-sm font-medium text-foreground mb-4">
+              {section.title}
+            </h3>
+          )}
+          <ul class="list-inside space-y-3">
+            {section.items?.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-muted-foreground hover:text-primary"
+                >
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="border-t py-4">
+    <div class="container flex items-center justify-between">
+      <p class="flex flex-col gap-2 md:flex-row">
+        <span class="text-muted-foreground text-sm">
+          Copyright &copy; 2024. All rights reserved.
+        </span>
+        <span class="hidden text-sm text-muted-foreground md:block"> | </span>
+        <span class="text-sm text-muted-foreground">
+          Made with <span class="text-[#FF0000]">&hearts;</span> by{" "}
+          <a
+            href="https://www.yokesh.in/"
+            target="_blank"
+            class="hover:text-[#2463eb]"
+          >
+            Yokesh
+          </a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
