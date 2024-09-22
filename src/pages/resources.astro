@@ -23,7 +23,7 @@ import {Card, CardTitle, CardDescription} from "@/components/ui/card"
     {
       resources?.map((item) => (
         <h1 class="font-bold text-xl mt-8">{item?.label}</h1>
-        <div class="grid grid-cols-4 mt-4 gap-4">
+        <div class="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4">
         {item?.items?.map((i) => (
             <a href={`https://${i?.link}`} target="_blank">
 
