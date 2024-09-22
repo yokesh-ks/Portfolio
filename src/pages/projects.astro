@@ -1,8 +1,8 @@
 ---
 import MainLayout from "@/layouts/main-layout.astro";
-import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { projects } from "@/constants/projects";
 import DocsPageHeader from "@/components/page-header.astro";
+import ProjectCard from "@/components/cards/project-card.astro";
 ---
 
 <MainLayout
@@ -10,27 +10,8 @@ import DocsPageHeader from "@/components/page-header.astro";
   description="Top Development Resources"
   mainClass="container max-w-6xl py-10"
 >
-    <DocsPageHeader
-      heading="🚀 Projects"
-      text=""
-    />
-    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        projects?.map((i) => (
-          <a href={`${i?.link}?ref=yokesh.in`} target="_blank">
-            <Card className="p-4 relative">
-              <img
-                src={i?.logo}
-                class="w-11 h-11 object-cover"
-                alt={i?.title}
-              />
-              <CardTitle className="mt-2 text-lg">{i?.title}</CardTitle>
-              <CardDescription className="mt-2">
-                {i?.description}
-              </CardDescription>
-            </Card>
-          </a>
-        ))
-      }
-    </div>
+  <DocsPageHeader heading="Projects" text="" />
+  <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {projects?.map((i) => <ProjectCard item={i} />)}
+  </div>
 </MainLayout>

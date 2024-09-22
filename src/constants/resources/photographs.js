@@ -1,7 +1,7 @@
 export const imageResources = [
   {
     label: "Freepik",
-    link: "www.freepik.com",
+    link: "freepik.com",
     description:
       "Freepik offers a wide variety of free and premium photos, vectors, and illustrations for creative use.",
     imageUrl: "https://fps.cdnpk.net/favicons/favicon.ico",

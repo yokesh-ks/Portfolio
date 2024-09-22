@@ -1,38 +1,41 @@
 ---
 import MainLayout from "@/layouts/main-layout.astro";
+import DocsPageHeader from "@/components/page-header.astro";
 ---
 
 <MainLayout
   title="About Me"
   description="Lorem ipsum dolor sit amet"
-  mainClass="container max-w-6xl py-10 gap-y-5 flex flex-col"
+  mainClass="container max-w-6xl py-10 "
 >
-  <h1 class="font-heading text-4xl">About Me</h1>
-  <p>👋 Hi, I'm YOKESH K S, a Lead Developer at Incresco.</p>
+  <DocsPageHeader heading="About" text="" />
+  <section class="gap-y-5 flex flex-col">
+    <p>👋 Hi, I'm YOKESH K S, a Lead Developer at Incresco.</p>
 
-  <p>
-    💻 I love coding and learning new things every day. I started my career in
-    mechanical engineering, but my heart found its home in web development.
-  </p>
+    <p>
+      💻 I love coding and learning new things every day. I started my career in
+      mechanical engineering, but my heart found its home in web development.
+    </p>
 
-  <p>
-    🚀 Lead Developer specializing in frontend development, adept at crafting
-    scalable, secure, and high-performance applications. I create awesome web
-    applications at Incresco, blending technical know-how with a creative touch.
-    Having been part of both product and project development, I've got the full
-    picture of how things come together. 🌐
-  </p>
+    <p>
+      🚀 Lead Developer specializing in frontend development, adept at crafting
+      scalable, secure, and high-performance applications. I create awesome web
+      applications at Incresco, blending technical know-how with a creative
+      touch. Having been part of both product and project development, I've got
+      the full picture of how things come together. 🌐
+    </p>
 
-  <p>
-    🎯 I'm on a mission: using my skills to deliver top-notch services and
-    products aligned with goals. I stay updated on the latest trends to offer
-    cutting-edge solutions in the digital world. Passionate about optimizing
-    development processes and fostering collaboration for project success and
-    excellence. 💡
-  </p>
+    <p>
+      🎯 I'm on a mission: using my skills to deliver top-notch services and
+      products aligned with goals. I stay updated on the latest trends to offer
+      cutting-edge solutions in the digital world. Passionate about optimizing
+      development processes and fostering collaboration for project success and
+      excellence. 💡
+    </p>
 
-  <p>
-    Let's connect and explore the endless possibilities in the world of coding
-    and innovation!
-  </p>
+    <p>
+      Let's connect and explore the endless possibilities in the world of coding
+      and innovation!
+    </p>
+  </section>
 </MainLayout>

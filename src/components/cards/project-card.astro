@@ -1,0 +1,39 @@
+---
+import { Card, CardTitle, CardDescription } from "../ui/card";
+import { Button } from "../ui/button";
+import { Icon } from "astro-icon/components";
+
+import { Separator } from "@camped-ui/separator";
+const item = Astro.props.item;
+---
+
+<Card className="p-6 relative">
+  <img
+    src={item?.logo}
+    class="w-11 h-11 object-cover"
+    alt={item?.title}
+  />
+  <CardTitle className="mt-2 text-lg">{item?.title}</CardTitle>
+  <CardDescription className="mt-2">
+    {item?.description}
+  </CardDescription>
+  <Separator className="mt-4" />
+
+  <div class="-mb-5 flex gap-3 border-t border-muted py-4 md:-mb-7">
+    <Button
+      variant="secondary"
+      size="sm"
+      rounded="xl"
+      className="px-4"
+    >
+      <a
+        href={`${item?.link}?ref=yokesh.in`}
+        class="flex items-center gap-2"
+        target="_blank"
+      >
+        <span>Visit the site</span>
+        <Icon name="lucide:arrow-up-right" class="size-4" />
+      </a>
+    </Button>
+  </div>
+</Card>

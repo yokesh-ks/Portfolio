@@ -22,6 +22,7 @@
     "@camped-ui/lib": "^2.0.2",
     "@camped-ui/navigation-menu": "^2.1.0",
     "@camped-ui/scroll-area": "^2.1.0",
+    "@camped-ui/separator": "^2.1.0",
     "@camped-ui/sheet": "^2.1.1",
     "@iconify-json/lucide": "^1.1.173",
     "@iconify-json/mdi": "^1.1.64",
